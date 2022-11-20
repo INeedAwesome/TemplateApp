@@ -16,7 +16,9 @@ I've made an app template with premake because I wanted it to help me set up fut
 > To use in windows:
 
 * Run *setup.bat* in /scripts
-* Run the .exe in /bin/**output**/**project name**/**project name**.exe
+* Open the .sln
+* Run desired configuration
+
 ***
 > To use in linux: 
 
