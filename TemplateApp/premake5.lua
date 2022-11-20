@@ -17,6 +17,9 @@ project "TemplateApp"
    filter "system:windows"
       systemversion "latest"
       defines { "WL_PLATFORM_WINDOWS" }
+   filter "system:linux"
+      systemversion "latest"
+      defines { "WL_PLATFORM_LINUX" }
 
    filter "configurations:Debug"
       defines { "WL_DEBUG" }
