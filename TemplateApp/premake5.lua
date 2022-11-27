@@ -5,6 +5,9 @@ project "TemplateApp"
    targetdir "bin/%{cfg.buildcfg}"
    staticruntime "off"
 
+   pchheader "stdafx.h"
+   pchsource "../%{prj.name}/src/stdafx.cpp"
+
    files { "src/**.h", "src/**.cpp" }
 
    includedirs
