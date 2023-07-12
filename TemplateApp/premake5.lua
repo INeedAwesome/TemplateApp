@@ -1,8 +1,7 @@
 project "TemplateApp"
    kind "ConsoleApp"
    language "C++"
-   cppdialect "C++17"
-   targetdir "bin/%{cfg.buildcfg}"
+   cppdialect "C++20"
    staticruntime "off"
 
    pchheader "stdafx.h"
@@ -12,10 +11,11 @@ project "TemplateApp"
 
    includedirs
    {
+      "$(ProjectDir)src"
    }
 
-   targetdir ("../bin/" .. outputdir .. "/%{prj.name}")
-   objdir ("../bin-int/" .. outputdir .. "/%{prj.name}")
+   targetdir ("../bin/" .. outputdir .. "-%{prj.name}")
+   objdir ("../bin-int/" .. outputdir .. "-%{prj.name}")
 
    filter "system:windows"
       systemversion "latest"
@@ -39,5 +39,5 @@ project "TemplateApp"
       kind "WindowedApp"
       defines { "WL_DIST" }
       runtime "Release"
-      optimize "On"
+      optimize "Speed"
       symbols "Off"
