@@ -11,7 +11,7 @@ project "TemplateApp"
 
    includedirs
    {
-      "$(ProjectDir)src"
+      "src/"
    }
 
    targetdir ("../bin/" .. outputdir .. "-%{prj.name}")
